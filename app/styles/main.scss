@@ -1,0 +1,272 @@
+$icon-font-path: '../fonts/';
+
+@import "variables";
+
+
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/sass-flex-mixin/flex.scss";
+// endbower
+
+@import "jumbotron";
+@import "type";
+@import "mixins";
+@import "buttons";
+
+
+/* FX */
+
+a, a[class^="btn-"], .slots > .row > div[class*="slot-"] {
+  @include transition(all 0.2s ease-out);
+}
+
+.collapsing-delay {
+  @include transition-delay(2s);
+}
+
+.animation-delay {
+  @include transition-delay(2s);
+}
+
+
+
+.btn-default:hover,
+.btn-default:focus {
+  background-color: rgba(255,255,255, 1);
+  color: #000;
+}
+
+.btn-transparent, .btn-transparent:hover, .btn-transparent:focus {
+  background: transparent;
+  outline: none !important;
+  box-shadow: none;
+  border: 0;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {;
+}
+
+/* Custom default button */
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #000;
+}
+body {
+  text-align: center;
+  font-weight: 200;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: #f2f2f2;
+}
+
+.flexbox .site-wrapper, .flexbox .site-wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+
+
+
+/*
+ * Header
+ */
+
+
+
+/*
+ * Cover
+ */
+
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+
+  // color: rgba(255,255,255,.8);
+  @include animation-delay(1.5s);
+  @include animation-duration(.5s);
+  width: 100%;
+  margin-top: 30px;
+  padding: 30px;
+  display: block;
+  position: relative;
+  margin-top: 0;
+  background-color: #000;
+}
+
+/*
+ * Sections
+ */
+
+section {
+  padding: 30px 0;
+}
+
+.section-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#about {
+  background: url("../images/about-me-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: $screen-sm) {
+
+  .site-wrapper {
+    padding-bottom: 80px;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0, .3);
+  }
+  .flexgrid, .flexgrid > .container-fluid > .row {
+    display: flex;
+  }
+
+  .flexgrid .container-fluid .row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+
+  .section-content.location {
+    align-self: baseline;
+  }
+
+  .no-top-mrg {
+    margin-top: 0;
+  }
+
+  .slot-location, .slot-status, .slot-hiring  {
+    height: 18vh;
+  }
+
+.slot-location p, .slot-status p {
+  padding-top: 6vh;
+}
+
+.slot-hiring p {
+  padding-top: 5vh;
+}
+  .slots {
+    align-self: stretch;
+  }
+
+}
+
+@media (min-width: $screen-md) {
+
+
+}
+
+/* Slots */
+
+.slots > .row > div[class*="slot-"]:hover {
+  background-color: $gray-darker;
+  cursor: pointer;
+}
+
+.slot-location, .slot-status, .slot-hiring  {
+  height: 18vh;
+}
+
+.slot-location p, .slot-status p {
+  padding-top: 6vh;
+}
+.slot-hiring p {
+  padding-top: 5vh;
+}
+
+.slot-location {
+  background-image:
+}
+
+/* Misc */
+
+
+
+
+.sub-text {
+  letter-spacing: .3em;
+  color: $gray-light;
+  position: relative;
+  display: inline-block;
+  font-size: floor((100% * $font-size-small / $font-size-base));
+  font-weight: 400;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.jumbotron .sub-text {
+  color: $fs-color-yellow;
+  padding-bottom: 10px;
+  font-size: 100%;
+}
+
+#about .sub-text {
+  color: rgba($fs-color-cyan, .5);
+}
+
+
+.fs-logo {
+  width: auto;
+}
+
+
+
+.test {
+  border: 5px solid red;
+  color: red;
+  background-color: yellow;
+}
+
+.center-fix {
+  margin: 0 auto;
+
+}
+.experience-logos {
+  opacity: .9;
+}

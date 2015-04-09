@@ -1,0 +1,72 @@
+//
+// Jumbotron
+// --------------------------------------------------
+
+
+.jumbotron {
+  // padding: $jumbotron-padding ($jumbotron-padding / 2);
+  padding: 0;
+  padding-bottom: $jumbotron-padding;
+  // margin-bottom: $jumbotron-padding;
+  margin-bottom: 0;
+  color: $jumbotron-color;
+  // background-color: $jumbotron-bg;
+
+  background-image: url("../images/cover-bg-blk.jpg");
+  background-size: cover;
+  background-position: center center;
+
+
+
+
+  h1,
+  .h1 {
+    color: $jumbotron-heading-color;
+  }
+
+  p {
+    margin-bottom: $jumbotron-padding;
+    font-size: $jumbotron-font-size;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+
+  .lead {
+    font-size: $jumbotron-font-size;
+    margin-bottom: $jumbotron-padding * 1.5;
+  }
+
+  hr  {
+    border-top-color: rgba($gray, .5);
+    margin-top: $jumbotron-padding;
+    padding-bottom: $jumbotron-padding / 2;
+  }
+
+  .container &,
+  .container-fluid & {
+    border-radius: $border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    padding: ($jumbotron-padding * 1.6) 0;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    min-height: 100vh;
+
+    .container &,
+    .container-fluid & {
+      padding-left:  ($jumbotron-padding * 2);
+      padding-right: ($jumbotron-padding * 2);
+    }
+
+    h1,
+    .h1 {
+      font-size: ($font-size-base * 3.0);
+    }
+
+  }
+}

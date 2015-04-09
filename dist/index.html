@@ -1,0 +1,36 @@
+<!doctype html> <html class="no-js flexbox"> <head> <meta charset=utf-8> <meta name=description> <meta name=viewport content="width=device-width, initial-scale=1"> <title>portfolio</title>  <link rel=stylesheet href=styles/vendor.css> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> </head> <body> <!--[if lt IE 10]>
+ <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+ <![endif]--> <div class="site-wrapper animated fadeIn"> <div class=site-wrapper-inner> <div class="jumbotron animated fadeIn"> <div class=container> <div class=row> <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"> <img src=images/fernandoseminario-logo-no-bg-short.png class="img-responsive fs-logo text-center center-fix"> </div> <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-holder"> <h1>Senior Web Designer and Developer</h1> <p class=lead>Glad to see you decided to stop by!</p> <p>If one of my pieces peaks your interest, don't hesitate to send me a shout by clicking on the "Contact" link at the top right. You took the time to come here so I'll take the time to talk!</p> <p> <a href=http://www.behance.net/fernandoseminario class="btn btn-primary btn-lg btn-block" role=button>View Portfolio</a> </p> <p> <a href=/files/resume-v3-r2.1.pdf class="btn btn-default btn-lg btn-block" role=button>Download Resume</a> </p> </div> </div> </div> <div class=container-fluid> <div class=row> <div class="col-sm-8 col-sm-offset-2"> <a class=btn href=#bio data-toggle=collapse> <h4 class=text-uppercase>Short Bio</h4> </a> <div id=bio class="collapse bio-wrap"> <p class=text-left>Known as the computer wizard by my friends, family, and co-workers, I have always had an intense curiousity about creativity, design, and computer technology. Even as a young child, most of my time was spent on the computer tinkering and breaking it. Arriving to my teenage years, I became interested in graphic design so I learned Photoshop 4 in order to create graphics for my first web site which was a music player that offered 8 songs. My professional experience has led to me work on many different digital mediums i.e. Branding, Web Design, Web Development, UX / UI, Photography and and Analytics. </p> <p class=text-left>Currently I live in Ladera Ranch, CA working as a Freelancer. I am open to consider certain full time opportunities.</p> <p> <button class="btn btn-lg btn-block btn-transparent text-center" data-toggle=collapse data-target=#collapseExample><span class="glyphicon glyphicon-remove" style="background-color: transparent;"></span></button> </p> </div> </div> </div> </div>   </div> <section> <div class=container-fluid> <div class=row> <div class=col-md-6> <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique.</h2> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar felis quis enim ultricies hendrerit. Donec vitae laoreet libero. Proin tempus dolor id venenatis fringilla. Suspendisse fringilla id leo non viverra. Nulla facilisi. Donec sit amet eros quam. Mauris metus ligula, varius eget lacinia et, dapibus sed eros. Donec vel viverra enim. Duis malesuada sit amet nibh aliquet lacinia. Nulla ut ullamcorper velit. Sed suscipit vehicula mauris eget egestas. </p> </div> </div> </div> </section> <div class="mastfoot animated fadeInUp"> <div class=inner> <small><span class="glyphicon glyphicon-copyright-mark"></span> 2015 Fernando Seminario <a href=mailto:hello@fernandoseminario.com> <span class="glyphicon glyphicon-envelope"></span></a> @twitter: <a href=http://twitter.com/fseminario>fseminario </a>. <span class="glyphicon glyphicon-heart"></span> Yeoman / Bootstrap 3</small> </div> </div> </div> </div>  <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-28579842-1');ga('send','pageview');
+    </script> <script src=scripts/vendor.js></script> <script src=scripts/plugins.js></script> <script src=scripts/main.js></script> <script>
+
+
+        $(function() {
+          // console.log("ready!");
+          var animateIn = 'animated fadeIn';
+          var animateOut = 'animated fadeOut collapsing-delay';
+
+          $('#bio').on('show.bs.collapse', function () {
+            // do something…
+            $(this).addClass(animateIn).on('shown.bs.collapse',
+              function() {
+              $(this).removeClass(animateIn);
+            });
+          })
+
+          $('#bio').on('hide.bs.collapse', function () {
+            // do something…
+            $(this).addClass(animateOut).on('hidden.bs.collapse',
+              function() {
+              $(this).removeClass(animateOut);
+            });
+          })
+
+        });
+
+        </script> </body> </html>

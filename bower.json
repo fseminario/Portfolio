@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "modernizr": "~2.8.1",
+    "holderjs": "~2.5.2",
+    "animate.css": "~3.2.6",
+    "fotorama": "~4.6.3",
+    "sass-flex-mixin": "~1.0.0"
+  }
+}
