@@ -6,7 +6,7 @@
 .jumbotron {
   // padding: $jumbotron-padding ($jumbotron-padding / 2);
   padding: 0;
-  padding-bottom: $jumbotron-padding;
+  padding-top: $jumbotron-padding;
   // margin-bottom: $jumbotron-padding;
   margin-bottom: 0;
   color: $jumbotron-color;
@@ -33,7 +33,7 @@
 
   .lead {
     font-size: $jumbotron-font-size;
-    margin-bottom: $jumbotron-padding * 1.5;
+    margin-bottom: $jumbotron-padding;
   }
 
   hr  {
@@ -53,7 +53,7 @@
 
   @media screen and (min-width: $screen-sm-min) {
     padding: ($jumbotron-padding * 1.6) 0;
-    padding-top: 10vh;
+    padding-top: 5vh;
     padding-bottom: 10vh;
     min-height: 100vh;
 

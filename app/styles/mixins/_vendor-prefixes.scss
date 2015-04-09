@@ -220,3 +220,10 @@
       -ms-user-select: $select; // IE10+
           user-select: $select;
 }
+
+// Filter
+
+@mixin fs-filter-grayscale($fs-filter-grayscale-amt) {
+  -webkit-filter: grayscale($fs-filter-grayscale-amt);
+  filter: grayscale($fs-filter-grayscale-amt);
+}

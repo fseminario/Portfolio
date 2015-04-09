@@ -2,8 +2,6 @@ $icon-font-path: '../fonts/';
 
 @import "variables";
 
-
-
 // bower:scss
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/sass-flex-mixin/flex.scss";
@@ -14,11 +12,14 @@ $icon-font-path: '../fonts/';
 @import "mixins";
 @import "buttons";
 
-
 /* FX */
 
-a, a[class^="btn-"], .slots > .row > div[class*="slot-"] {
+a, a[class^="btn-"], .slots > .row > div[class*="slot-"], .comeToFocus, .glyphicon, .fs-disciplines-list li img{
   @include transition(all 0.2s ease-out);
+}
+
+.comeToFocus:hover {
+  background-color: rgba(0,0,0,.4);
 }
 
 .collapsing-delay {
@@ -90,10 +91,6 @@ h1,h2,h3,h4,h5,h6 {
   flex: 1;
 }
 
-
-
-
-
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 
 
@@ -120,8 +117,8 @@ h1,h2,h3,h4,h5,h6 {
   @include animation-delay(1.5s);
   @include animation-duration(.5s);
   width: 100%;
-  margin-top: 30px;
-  padding: 30px;
+  margin-top: $grid-gutter-width;
+  padding: $font-size-base;
   display: block;
   position: relative;
   margin-top: 0;
@@ -147,8 +144,90 @@ section {
   background-position: center;
 }
 
+.fs-disciplines-list {
+  padding-left: 0;
+  list-style: none;
+  li {
+    float: left;
+    padding: $font-size-base;
+    width: 25%;
+    height: 115px;
+  }
+  li img {
+    @include fs-filter-grayscale(100%);
+    &:hover {
+      @include fs-filter-grayscale(0);
+    }
+  }
+}
+
+
+
+.sub-text {
+  letter-spacing: .3em;
+  color: $gray-light;
+  position: relative;
+  display: inline-block;
+  font-size: floor((100% * $font-size-small / $font-size-base));
+  font-weight: 400;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.jumbotron .sub-text {
+  color: $fs-color-yellow;
+  font-size: 100%;
+}
+
+.btn-icon .glyphicon {
+  color: $fs-color-yellow;
+  font-size: 300%;
+  &:hover {
+    color: $fs-color-cyan;
+  }
+}
+
+
+.btn-icon-wrapper {
+  background-color: rgba($gray-base, .2);
+
+  padding: $font-size-base*2;
+  &:hover {
+
+  }
+}
+
+#about .sub-text {
+  color: rgba($fs-color-cyan, .5);
+}
+
+
+.fs-logo {
+  width: auto;
+}
+
+
+
+.test {
+  border: 5px solid red;
+  color: red;
+  background-color: yellow;
+}
+
+.center-fix {
+  margin: 0 auto;
+
+}
+.experience-logos {
+  opacity: .9;
+}
+
+#disciplines {
+  background-image: url("../images/white-water-bg.jpg");
+  background-size: cover;
+}
+
 /*
- * Affix and center
+ * Media Queries
  */
 
 @media (min-width: $screen-sm) {
@@ -196,7 +275,16 @@ section {
     align-self: stretch;
   }
 
+  .btn.btn-icon .glyphicon {
+    font-size: 500%;
+  }
+
+  .fs-disciplines-list li {
+    width: 12.5%;
+  }
+
 }
+
 
 @media (min-width: $screen-md) {
 
@@ -222,51 +310,6 @@ section {
 }
 
 .slot-location {
-  background-image:
 }
 
 /* Misc */
-
-
-
-
-.sub-text {
-  letter-spacing: .3em;
-  color: $gray-light;
-  position: relative;
-  display: inline-block;
-  font-size: floor((100% * $font-size-small / $font-size-base));
-  font-weight: 400;
-  margin-top: 0;
-  text-transform: uppercase;
-}
-.jumbotron .sub-text {
-  color: $fs-color-yellow;
-  padding-bottom: 10px;
-  font-size: 100%;
-}
-
-#about .sub-text {
-  color: rgba($fs-color-cyan, .5);
-}
-
-
-.fs-logo {
-  width: auto;
-}
-
-
-
-.test {
-  border: 5px solid red;
-  color: red;
-  background-color: yellow;
-}
-
-.center-fix {
-  margin: 0 auto;
-
-}
-.experience-logos {
-  opacity: .9;
-}

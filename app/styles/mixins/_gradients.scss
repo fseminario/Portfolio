@@ -51,6 +51,11 @@
   background-image: radial-gradient(circle, $inner-color, $outer-color);
   background-repeat: no-repeat;
 }
+@mixin gradient-radial-closest($inner-color: #555, $outer-color: #333) {
+  background-image: -webkit-radial-gradient(circle closest-side, $inner-color, $outer-color);
+  background-image: radial-gradient(circle closest-side, $inner-color, $outer-color);
+  background-repeat: no-repeat;
+}
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
   background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
