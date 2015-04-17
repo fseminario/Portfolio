@@ -41,7 +41,7 @@
           <div class="row">
 
             <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <img src="images/fernandoseminario-logo-no-bg-short.png" class="img-responsive fs-logo text-center center-fix animated tada"/>
+            <img src="images/fernandoseminario-logo-no-bg-short.png" class="img-responsive fs-logo text-center center-fix"/>
             </div>
 
             <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-holder">
@@ -158,6 +158,10 @@
                   <img src="images/photography-icon.png" alt="Asana Project Management" title="Asana Project Management" class="img-responsive" />
                   </li>
 
+                  <li>
+                  <img src="images/github-icon.png" alt="Asana Project Management" title="Asana Project Management" class="img-responsive" />
+                  </li>
+
                 </ul>
 
 
@@ -266,24 +270,38 @@
 
         $(function() {
           // console.log("ready!");
-          var animateIn = 'animated fadeIn';
-          var animateOut = 'animated fadeOut collapsing-delay';
 
-          $('#bio').on('show.bs.collapse', function () {
-            // do something…
-            $(this).addClass(animateIn).on('shown.bs.collapse',
-              function() {
-              $(this).removeClass(animateIn);
-            });
-          })
+          $('').each(function(e) {
 
-          $('#bio').on('hide.bs.collapse', function () {
-            // do something…
-            $(this).addClass(animateOut).on('hidden.bs.collapse',
-              function() {
-              $(this).removeClass(animateOut);
+            var closestSection = $(this).closest('section');
+
+            var sectionOriginalImg = closestSection.css('background-image');
+
+            var currentSectionBgName = closestSection.css('background-image').split('/').pop().slice(0, -5);
+
+            var currentSectionBgExt = closestSection.css('background-image').split('.').pop().slice(0, -1);
+
+            var currentSectionBgAlt = "/images/" + currentSectionBgName + "-alt." + currentSectionBgExt;
+
+            console.log(currentSectionBgName + "\n" +  currentSectionBgExt + "\n" + currentSectionBgAlt);
+
+            $(this).on("mouseenter", function (e) {
+
+              console.log("test" + currentSectionBgAlt);
+              // do something…
+              closestSection.fadeTo().css('background-image', 'url(' + currentSectionBgAlt + ')');
+
             });
-          })
+
+            $(this).on("mouseleave", function(e) {
+
+              console.log("test" + sectionOriginalImg);
+              // do something…
+              closestSection.css('background-image', sectionOriginalImg);
+
+            });
+
+          });
 
         });
 

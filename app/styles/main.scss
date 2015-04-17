@@ -144,14 +144,26 @@ section {
   background-position: center;
 }
 
+#disciplines {
+  background:
+
+   url("../images/cement-break-bg.jpg") center center;                      /* On bottom, like z-index: 1; */
+  background-size: cover;
+
+  h2 {
+    color: $gray-dark;
+  }
+}
+
 .fs-disciplines-list {
   padding-left: 0;
   list-style: none;
+  overflow: hidden;
   li {
     float: left;
     padding: $font-size-base;
     width: 25%;
-    height: 115px;
+    height: 120px;
   }
   li img {
     @include fs-filter-grayscale(100%);
@@ -221,14 +233,18 @@ section {
   opacity: .9;
 }
 
-#disciplines {
-  background-image: url("../images/white-water-bg.jpg");
-  background-size: cover;
-}
+
 
 /*
  * Media Queries
  */
+
+ @media (min-width: $screen-xs) {
+   .fs-disciplines-list li {
+     width: 20%;
+     padding: $font-size-base;
+   }
+ };
 
 @media (min-width: $screen-sm) {
 
@@ -280,7 +296,7 @@ section {
   }
 
   .fs-disciplines-list li {
-    width: 12.5%;
+    width: 16%;
   }
 
 }
@@ -288,6 +304,9 @@ section {
 
 @media (min-width: $screen-md) {
 
+  .fs-disciplines-list li {
+    width: 10%;
+  }
 
 }
 
