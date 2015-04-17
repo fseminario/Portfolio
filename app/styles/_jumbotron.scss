@@ -12,7 +12,7 @@
   color: $jumbotron-color;
   // background-color: $jumbotron-bg;
 
-  background-image: url("../images/cover-bg-blk.jpg");
+  background-image: url("../images/cover-bg-blk-v2.jpg");
   background-size: cover;
   background-position: center center;
 
@@ -53,7 +53,7 @@
 
   @media screen and (min-width: $screen-sm-min) {
     padding: ($jumbotron-padding * 1.6) 0;
-    padding-top: 5vh;
+    padding-top: 8vh;
     padding-bottom: 10vh;
     min-height: 100vh;
 

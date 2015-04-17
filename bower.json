@@ -7,6 +7,7 @@
     "holderjs": "~2.5.2",
     "animate.css": "~3.2.6",
     "fotorama": "~4.6.3",
-    "sass-flex-mixin": "~1.0.0"
+    "sass-flex-mixin": "~1.0.0",
+    "compass-mixins": "~1.0.2"
   }
 }

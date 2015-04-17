@@ -5,6 +5,7 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/sass-flex-mixin/flex.scss";
+@import "bower_components/compass-mixins/lib/_compass.scss";
 // endbower
 
 @import "jumbotron";
@@ -57,6 +58,13 @@ a, a[class^="btn-"], .slots > .row > div[class*="slot-"], .comeToFocus, .glyphic
 /*
  * Globals
  */
+
+ .fs-yellow {
+   color: $fs-color-yellow;
+ }
+ .fs-cyan {
+   color: $fs-color-cyan;
+ }
 
 /* Links */
 a,
@@ -138,6 +146,8 @@ section {
   padding-bottom: 30px;
 }
 
+
+
 #about {
   background: url("../images/about-me-bg.jpg");
   background-size: cover;
@@ -147,10 +157,10 @@ section {
 #disciplines {
   background:
 
-   url("../images/cement-break-bg.jpg") center center;                      /* On bottom, like z-index: 1; */
+   url("../images/white-water-bg.jpg") center center;                      /* On bottom, like z-index: 1; */
   background-size: cover;
 
-  h2 {
+  h2, p {
     color: $gray-dark;
   }
 }
@@ -162,13 +172,13 @@ section {
   li {
     float: left;
     padding: $font-size-base;
-    width: 25%;
-    height: 120px;
+    width: 33%;
+    height: 100px;
   }
   li img {
-    @include fs-filter-grayscale(100%);
+    @include filter(grayscale(100%)  brightness(30%) opacity(70%));
     &:hover {
-      @include fs-filter-grayscale(0);
+      @include filter(grayscale(0%));
     }
   }
 }
@@ -177,7 +187,6 @@ section {
 
 .sub-text {
   letter-spacing: .3em;
-  color: $gray-light;
   position: relative;
   display: inline-block;
   font-size: floor((100% * $font-size-small / $font-size-base));
@@ -186,7 +195,6 @@ section {
   text-transform: uppercase;
 }
 .jumbotron .sub-text {
-  color: $fs-color-yellow;
   font-size: 100%;
 }
 
@@ -243,19 +251,20 @@ section {
    .fs-disciplines-list li {
      width: 20%;
      padding: $font-size-base;
+     height: 120px;
    }
  };
 
 @media (min-width: $screen-sm) {
 
   .site-wrapper {
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
   .mastfoot {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0, .3);
+    background-color: rgba(0,0,0, .75);
   }
   .flexgrid, .flexgrid > .container-fluid > .row {
     display: flex;
@@ -305,7 +314,7 @@ section {
 @media (min-width: $screen-md) {
 
   .fs-disciplines-list li {
-    width: 10%;
+    width: 16.5%;
   }
 
 }
@@ -331,4 +340,11 @@ section {
 .slot-location {
 }
 
-/* Misc */
+/* Effects XF */
+
+#link-portfolio {
+  @include animation-delay(1s);
+}
+#link-resume {
+  @include animation-delay(2s);
+}

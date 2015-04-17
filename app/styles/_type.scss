@@ -57,9 +57,14 @@ h6, .h6 { font-size: $font-size-h6; }
 
 p {
   margin: 0 0 ($line-height-computed / 2);
-  font-weight: 100;
-  letter-spacing: .1em;
+  font-weight: 300;
+  letter-spacing: .05em;
   text-shadow: none;
+  @media (min-width: $screen-sm-min) {
+    font-weight: 100;
+    letter-spacing: .1em;
+  }
+
 }
 
 .lead {
