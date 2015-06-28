@@ -2,8 +2,6 @@
 
 <!doctype html>
 <html class="no-js flexbox" lang="">
-
-</html>
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -11,20 +9,11 @@
     <title>Fernando Seminario - Web Designer and Developer - Multidisciplined</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
-    <link rel="stylesheet" href="/bower_components/fotorama/fotorama.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/vendor.css">
 
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <script src="scripts/vendor/modernizr.js"></script>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -243,73 +232,12 @@
       ga('create','UA-28579842-1');ga('send','pageview');
     </script>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/holderjs/holder.js"></script>
-    <script src="/bower_components/fotorama/fotorama.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="scripts/vendor.js"></script>
 
-        <!-- build:js scripts/plugins.js -->
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/plugins.js"></script>
 
-        <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
-        <!-- endbuild -->
 
-        <script>
-
-
-        $(function() {
-          // console.log("ready!");
-
-          $('').each(function(e) {
-
-            var closestSection = $(this).closest('section');
-
-            var sectionOriginalImg = closestSection.css('background-image');
-
-            var currentSectionBgName = closestSection.css('background-image').split('/').pop().slice(0, -5);
-
-            var currentSectionBgExt = closestSection.css('background-image').split('.').pop().slice(0, -1);
-
-            var currentSectionBgAlt = "/images/" + currentSectionBgName + "-alt." + currentSectionBgExt;
-
-            console.log(currentSectionBgName + "\n" +  currentSectionBgExt + "\n" + currentSectionBgAlt);
-
-            $(this).on("mouseenter", function (e) {
-
-              console.log("test" + currentSectionBgAlt);
-              // do something…
-              closestSection.fadeTo().css('background-image', 'url(' + currentSectionBgAlt + ')');
-
-            });
-
-            $(this).on("mouseleave", function(e) {
-
-              console.log("test" + sectionOriginalImg);
-              // do something…
-              closestSection.css('background-image', sectionOriginalImg);
-
-            });
-
-          });
-
-        });
-
-        </script>
+      
 </body>
 </html>
